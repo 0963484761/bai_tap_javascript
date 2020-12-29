@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=div, initial-scale=1.0">
+	<title></title>
+</head>
+<body>
+	<input type="text" id="btn" name="" value="0">
+	<input type="submit" name="" onclick="print_number()">
+    <div id="btn1"></div>
+   <script type="text/javascript">
+   	//Bài 01: Xây dựng chương trình có một ô Input, một button. Khi click vào button thì in các số từ 1 tới giá trị của ô input
+        function print_number(){
+        	var number = document.getElementById('btn').value;
+             // ép sang kiểu number
+             number = parseInt(number);
+             // lặp để in kết quả
+             var html = '';
+             for (var i = 0; i <= number; i++) {
+                html += i + "</br>";
+             }
+             document.getElementById('btn1').innerHTML = html;
+
+        }
+   </script>
+       <br>
+       <input type="text" id="btn2" name="" value="0">
+	<input type="submit" name="" onclick="print_snt()">
+    <div id="btn3"></div>
+   <script type="text/javascript">
+   // Bài 02: Viết chương trình có một ô input, một button. Khi click vào button thì in ra các số nguyên tố từ 1 tới giá trị của ô input
+    
+    function kiem_tra_snt(n){
+    	var falg = true;
+
+    	if (n < 2) {
+    		falg = false;
+    	}else{
+    		for (var i = 2; i < n-1; i++) {
+    			if (n % i == 0) {
+    				falg = false;
+    				break;
+    			}
+    		}
+    	}
+    	return falg;
+    }
+    function print_snt(){
+    	 var numb = document.getElementById('btn2').value;
+    	 numb =  parseInt(numb);
+        var tong = '';
+
+        for (var i = 1; i < numb; i++) {
+         if (kiem_tra_snt(i)) {
+         	tong += i + "</br>";
+         }
+        }
+        document.getElementById('btn3').innerHTML = tong;
+    }
+   </script>
+       <div>thẻ 1</div>
+       <div>thẻ 2</div>
+       <div>thẻ 3</div>
+       <div>thẻ 4</div>
+       <div>thẻ 5</div>
+       <div>thẻ 6</div>
+       <div>thẻ 7</div>
+       <div>thẻ 8</div>
+       <div>thẻ 9</div>
+       <div>thẻ 10</div>
+       <button id="bt" onclick="backup()">click</button>
+     <script type="text/javascript">
+     	// Cho 10 thẻ div, hãy viết chương trình khi click vào button thì sẽ đổi màu cho các thẻ div. Nếu div nào vị trí chẵn thì background màu đỏ và lẽ thì background màu xanh.
+            
+          function backup(){
+          	var div = document.getElementsByTagName('div');
+          	for (var i = 0; i < div.length; i++) {
+          		if ((i + 1) % 2 == 0) {
+          			div[i].style.background = 'red';
+          		}else{
+          			div[i].style.background = 'green';
+          		}
+          	}
+          }   
+
+     </script>
+</body>
+</html>

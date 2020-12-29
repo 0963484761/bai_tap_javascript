@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=div, initial-scale=1.0">
+	<title></title>
+	<style type="text/css">
+	.haha{
+		background: yellow;
+		color: white;
+	}	
+	</style>
+</head>
+<body>
+	<input type="submit" id="name1" name="abc" value="chọn1" >
+	<input type="submit" id="name2" name="abc" value="chọn2">
+	<div class="haha" id="btn">
+	<h3>Hùng đẹp trai dubaj</h3>
+	</div>
+     <script type="text/javascript">
+     	 // Thay đổi backgroud của thẻ HTML bằng Javascript
+          var backup1 = document.getElementById('name1');
+          var backup2 = document.getElementById('name2');
+          var div = document.getElementById('btn');
+
+          backup1.onclick = function(){
+            div.style.background = 'red';
+          }
+
+          backup2.onclick = function(){
+          	div.style.background = 'green';
+          }
+
+     </script>
+</body>
+</html>

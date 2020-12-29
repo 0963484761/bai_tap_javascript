@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=div, initial-scale=1.0">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	  // Kiểm tra số nguyên tố bằng Javascript
+
+	  do{
+        var n = prompt('Mời bạn nhập vào một số');
+        if (!isNaN(n)) {
+        	break;
+        }
+        alert('Mời bạn nhập lại');
+
+	  }while(isNaN(n));
+	  // tạo hàm
+
+	  function checkNumber(n){
+	  	/// tạo một biến cờ hiệu
+	  	var falg = true;
+	  	// nếu  mà nhỏ hơn 2 thì không phải là số nguyên tố
+	  	if (n < 2) {
+	  	falg = false;
+	  	}else{
+	  		// lặp từ 2 cho tới n -1
+	  		for (var i = 2; i < n-1; i++) {
+	  			if (n % i == 0) {
+	  				falg = false;
+	  				break;
+	  			}
+	  		}
+	  	}
+	  	// kiểm tra biến falg
+	  	if(falg == true){
+	  		console.log('chính là số nguyên tố');
+	  	}else{
+	  		console.log('không phải là số nguyên tố');
+	  	}
+	  }
+	  checkNumber(n);
+
+	  // cách 2 Kế thừa từ định nghĩa và tính chất "số 2 là số nguyên tố chẵn duy nhất" ta sẽ thực hiện các bước sau để kiểm tra:
+
+	  var a = 3;
+	  function snt(a){
+	  	// tạo biến cờ hiệu
+	  	var regular = true;
+	  	if (a < 2) {
+	  		regular =  false;
+	  	}else if(a == 2){
+           regular = true;
+	  	}else if(a % 2 == 0){
+             regular = false;
+	  	}else{
+	  		for (var i = 3; i < n-1; i+=2) {
+	  			if(n % i == 0){
+	  			regular = false;
+	  			break;
+	  			}
+	  		}
+	  	}
+        	if(regular == true){
+	  		console.log('chính là số nguyên tố');
+	  	}else{
+	  		console.log('không phải là số nguyên tố');
+	  	}
+	  }
+	  snt(a);
+</script>
+</body>
+</html>

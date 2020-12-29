@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=div, initial-scale=1.0">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	// bài 1 Bài 01: Tính tổng các số chẵn từ 0 tới n bằng cách sử dụng vòng lặp while trong javascript
+	 var n = prompt('mời bạn nhập một số để kiểm tra');
+
+	 function tinh_tong(n){
+	 	var tong = 0;
+         var i = 0;
+	 	while(i <= n){
+           if (i % 2 == 0) {
+           	tong += i;
+           }
+             i++;
+	 	}
+	 	return tong;
+	 }
+	 document.write(' Tổng các số chẵn là: ' + tinh_tong(n));
+</script>
+  <div>chẵn</div>
+  <div>lẻ</div>
+   <div>chẵn</div>
+  <div>lẻ</div>
+   <div>chẵn</div>
+  <div>lẻ</div>
+   <div>chẵn</div>
+  <div>lẻ</div>
+   <div>chẵn</div>
+  <div>lẻ</div>
+   <div>chẵn</div>
+  <div>lẻ</div>
+   <div>chẵn</div>
+  <div>lẻ</div>
+<script type="text/javascript">
+	// Bài 02: Cho trước danh sách cấu trúc HTML như dưới đây. Hãy sử dụng Javascript xóa đi các thẻ div có vị trí chẵn.
+	function removechan(){
+         var div = document.getElementsByTagName('div');
+
+         // tạo mảng cần xóa
+         var mang = [];
+         var i = 0;
+         while(i < div.length){
+         	if (i % 2 == 0) {
+         		mang.push(div[i]);
+         	}
+         	i++;
+         }
+         var i = 0;
+         while(i < div.length){
+         	mang[i].remove();
+         	i++;
+         }
+	}
+</script>
+<button onclick="removechan()">xóa</button>
+</body>
+</html>

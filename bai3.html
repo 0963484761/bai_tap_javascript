@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=div, initial-scale=1.0">
+	<title></title>
+</head>
+<body>
+	<input type="submit" name="name1" value="button1" onclick="thename1()">
+	<input type="submit" name="name2" value="button2" onclick="thename2()">
+	<div id="btn"></div>
+   <script type="text/javascript">
+   	  // Thay đổi nội dung của thẻ HTML bằng Javascript
+   	  function thename1(){
+   	  	var card1 = document.getElementById('btn');
+   	  	card1.innerHTML = "Demo thay đổi nội dung thẻ div bằng javascript tại Freetuts";
+   	  }
+   	  function thename2(){
+   	  	var card2 = document.getElementById('btn');
+        card2.innerHTML = "Nội dung của thẻ Div đã bị thay đổi";
+   	  }
+
+   </script>
+   <input type="submit" name="name1" id="btn2" value="button1" onclick="thename1()">
+	<input type="submit" name="name2" id="btn3" value="button2" onclick="thename2()">
+	<div id="btn1" style="background: blue ; color: white"></div>
+	<script type="text/javascript">
+		  // cách 2 này là của freetuts.net
+		  var the1 = document.getElementById('btn2');
+		  var the2 = document.getElementById('btn3');
+		  var div  = document.getElementById('btn1');
+		  the1.onclick = function(){
+		  	div.innerHTML = "Demo thay đổi nội dung thẻ div bằng javascript tại Freetuts";
+		  }
+		  the2.onclick  = function(){
+            div.innerHTML = "Nội dung của thẻ Div đã bị thay đổi";
+		  }
+        
+	</script>
+</body>
+</html>
